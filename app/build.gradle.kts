@@ -1,20 +1,20 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id(ProjectDependencies.Plugins.Android.android_application)
+    id(ProjectDependencies.Plugins.Dagger.dagger_hilt)
+    kotlin(ProjectDependencies.Plugins.JetBrains.kotlin_android)
+    kotlin(ProjectDependencies.Plugins.JetBrains.kotlin_kapt)
 }
 
 android {
-    namespace = "com.letmecode.testapplication"
-    compileSdk = 34
+    namespace = GradleConfig.application_id
+    compileSdk = GradleConfig.compile_sdk
 
     defaultConfig {
-        applicationId = "com.letmecode.testapplication"
-        minSdk = 29
-        targetSdk = 34
+        applicationId = GradleConfig.application_id
+        minSdk = GradleConfig.min_sdk
+        targetSdk = GradleConfig.target_sdk
         versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        versionName = GradleConfig.version_name
     }
 
     buildTypes {
@@ -26,22 +26,26 @@ android {
             )
         }
     }
+    buildFeatures {
+        viewBinding = true
+    }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = GradleConfig.jvm_target
     }
 }
 
 dependencies {
+    //Projects
+    implementation(project(ProjectDependencies.FeatureModule.core))
+    implementation(project(ProjectDependencies.FeatureModule.bottombar))
+    implementation(project(ProjectDependencies.FeatureModule.data))
+    implementation(project(ProjectDependencies.FeatureModule.domain))
 
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    //Dagger-hilt
+    implementation(ProjectDependencies.Google.Dagger.dagger)
+    kapt(ProjectDependencies.Google.Dagger.dagger_compiler)
 }
