@@ -22,4 +22,6 @@ android {
 dependencies {
     api(ProjectDependencies.Plugins.Dagger.inject)
     api(ProjectDependencies.Coroutines.coroutines)
+    //Gson
+    api(ProjectDependencies.Google.gson)
 }

@@ -1,0 +1,6 @@
+<inset
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/custom_alert_dialog_round"
+    android:insetRight="40dp"
+    android:insetLeft="40dp">
+</inset>

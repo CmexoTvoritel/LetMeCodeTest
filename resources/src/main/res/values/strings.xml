@@ -1,3 +1,37 @@
 <resources>
-    <string name="app_name">resources</string>
+
+    <!-- Main Fragment -->
+
+    <string name="fragment_main_reviews_title">Reviews</string>
+    <string name="fragment_main_critics_title">Critics</string>
+
+    <!-- Main Fragment -->
+
+    <!-- Reviews Fragment -->
+
+    <string name="fragment_reviews_date_hint">2017 / 12 / 10</string>
+    <string name="fragment_reviews_search_hint">Поиск</string>
+    <string name="fragment_reviews_title">Beyond Skyline</string>
+    <string name="fragment_reviews_description">Liam O\'Donnell\'s genre-hopping film takes its characters from Los Angeles to Laos, but risks losing its audience along the way.</string>
+    <string name="fragment_reviews_author">Glenn Kenny</string>
+    <string name="fragment_reviews_date">2017/12/14</string>
+    <string name="fragment_reviews_time">12:04:02</string>
+    <string name="fragment_reviews_error_loading">No information about reviews</string>
+
+    <!-- Reviews Fragment -->
+    
+    <!-- Critics Fragment -->
+
+    <string name="fragment_critics_progress">Content in progress :)</string>
+    
+    <!-- Critics Fragment -->
+
+    <!-- Dialog -->
+
+    <string name="dialog_internet_error_title">Error occurred</string>
+    <string name="dialog_internet_error_subtitle">Something went wrong. Check your connection and try to reload page</string>
+    <string name="dialog_internet_button">OK</string>
+
+    <!-- Dialog -->
+
 </resources>

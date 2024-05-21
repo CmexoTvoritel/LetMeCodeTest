@@ -77,13 +77,15 @@ object ProjectDependencies {
             const val dynamicanimation = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"
             const val percent_layout = "androidx.percentlayout:percentlayout:1.0.0"
             const val palette = "androidx.palette:palette:1.0.0"
+            const val swipe_refresh_layout = "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+            const val viewpager2 = "androidx.viewpager2:viewpager2:1.1.0"
         }
         val androidx_list = listOf(
             Lifecycle.runtime, Lifecycle.viewmodel, Lifecycle.process,
             Navigation.ui, Navigation.fragment, Navigation.features, Navigation.runtime,
             Core.core, Core.appcompat, Core.preference, Core.recyclerview, Core.recyclerview_selection,
             Core.constraint, Core.swipeToRefresh, Core.percent_layout, Core.dynamicanimation,Core.palette,
-            Core.activity, Core.activity_ktx
+            Core.activity, Core.activity_ktx, Core.swipe_refresh_layout, Core.viewpager2
         )
     }
 
